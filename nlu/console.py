@@ -3,6 +3,10 @@
 create nlu interpreter
 parse incoming queries
 
+required arguments:
+  model
+  query
+
 $ python console.py model_20190119-124624 "recommend garage rock from 1991"
 
 """
