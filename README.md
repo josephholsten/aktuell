@@ -49,3 +49,4 @@ Supported intents:
   RECOMMEND
   PLAYLIST
   SEARCH
+  PLAY
