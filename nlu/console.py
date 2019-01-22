@@ -7,7 +7,7 @@ required arguments:
   model
   query
 
-$ python console.py model_20190119-124624 "recommend garage rock from 1991"
+$ python console.py play-jan22 "play beyonce"
 
 """
 
@@ -48,5 +48,6 @@ if __name__ == "__main__":
     
     print()
     print("Test result:")
-    print(args.query+','+str(get_test_result(result)))
+    # TODO: csv formatting
+    print("\""+args.query+"\""+','+"\""+str(get_test_result(result))+"\"")
     

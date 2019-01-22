@@ -6,6 +6,12 @@ The purpose of test fixtures is to provide a fixed baseline upon which tests can
 
 """
 
+import csv
+with open('queries.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    
+
+
 @pytest.fixture
 def nlu_parser():
     dir_path = os.path.dirname(os.path.realpath(__file__))
