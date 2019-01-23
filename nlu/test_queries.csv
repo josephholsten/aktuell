@@ -1,0 +1,4 @@
+"show me stooges albums","{'entities': [{'entity': 'artist', 'value': 'stooges'}, {'entity': 'release', 'value': 'albums'}], 'intent': 'search'}"
+"play beyonce","{'entities': [{'entity': 'artist', 'value': 'beyonce'}], 'intent': 'play'}"
+"share bach between 1720 and 1725 with patty","{'entities': [{'entity': 'work', 'value': 'bach'}, {'entity': 'temp_sig', 'value': 'between'}, {'entity': 'time', 'value': '1720'}, {'entity': 'work', 'value': 'and'}, {'entity': 'work', 'value': '1725'}, {'entity': 'who', 'value': 'patty'}], 'intent': 'share'}"
+"share Bad Religion and samhain with steve","{'entities': [{'entity': 'artist', 'value': 'bad'}, {'entity': 'work', 'value': 'and'}, {'entity': 'work', 'value': 'samhain'}, {'entity': 'who', 'value': 'steve'}], 'intent': 'share'}"

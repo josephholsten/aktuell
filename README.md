@@ -14,7 +14,11 @@ Use `console.py` to parse queries:
 
 ```$ python console.py model20190119 "recommend garage rock from 1991"```
 
-Use `pytest` to assess parser coverage.
+Use `pytest` to assess parser coverage:
+
+```$ python -m pytest test_parser.py --disable-pytest-warnings```
+
+
 
 
 # Annotation Guidelines
@@ -36,11 +40,11 @@ Supported entity types:
   LAB_SIG
   PLAYLIST
 
-Supported look ups:
+Supported lookups:
 
-  GENRE
-  FORMAT
-  RELEASE
+  (GENRE)
+  (FORMAT)
+  (RELEASE)
 
 Supported intents:
 
