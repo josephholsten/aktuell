@@ -1,0 +1,41 @@
+#!/bin/sh
+# bootstrap: set up a new machine for development
+
+# exit on any failed command
+set -e
+
+# DEBUG MODE: print every command
+set -x
+
+PIP=.venv/bin/pip3
+
+if ! command -v python3 2>/dev/null; then
+        echo 'aktuell requires python3.6 but it cannot be found in your path.' >&2
+        echo 'python3.6 is a little touchy to install, you should google for the latest approach. `brew install python` will not work' >&2
+        exit 1
+fi
+
+# instantiate virtualenv
+python3 -m venv .venv
+
+# activate virtualenv
+. .venv/bin/activate
+
+$PIP install --upgrade pip
+
+# pip3 install spacy==2.0.12
+# python -m spacy download en_core_web_md 
+
+# install the spacy en_core_web_sm==2.0.0 package explicitly
+LANGMODEL=en_core_web_md-2.0.0
+$PIP install https://github.com/explosion/spacy-models/releases/download/$LANGMODEL/$LANGMODEL.tar.gz
+
+# install dependencies
+$PIP install -r requirements.txt
+
+
+# And we're ready!
+echo "Bootstrap successful! You can now begin by activating the venv with:"
+echo "    . .venv/bin/activate"
+echo "and running a command like:"
+echo "    cd nlu; python -m rasa_nlu.train --config config.yml --data data/data.md --fixed_model_name feb5"
