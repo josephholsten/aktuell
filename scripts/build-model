@@ -1,0 +1,12 @@
+#!/bin/sh
+# build-model: build an updated model
+
+set -x
+
+DATE="$(date +%Y-%m-%d)"
+MODEL_NAME="model-${DATE}"
+
+CONFIG=nlu/config.yml
+DATA=nlu/data/data.md
+
+.venv/bin/python3 -m rasa_nlu.train --config "$CONFIG" --data "$DATA" --fixed_model_name "$MODEL_NAME"
