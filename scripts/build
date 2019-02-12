@@ -1,0 +1,4 @@
+#!/bin/sh
+# build: build all generated artifacts we'll need for runtime
+
+./scripts/build-model
