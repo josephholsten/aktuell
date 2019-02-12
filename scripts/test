@@ -1,0 +1,4 @@
+#!/bin/sh
+# test: run aktuell tests
+
+.venv/bin/python3 -m pytest nlu/test_parser.py --disable-pytest-warnings
